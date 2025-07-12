@@ -1,0 +1,111 @@
+/* Additional styles for the game */
+.game-loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    font-size: 24px;
+    z-index: 100;
+}
+
+.character-select {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.9);
+    padding: 20px;
+    border-radius: 15px;
+    color: white;
+    text-align: center;
+    z-index: 50;
+}
+
+.character-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.character-card {
+    width: 80px;
+    height: 80px;
+    background: #333;
+    border: 2px solid #666;
+    border-radius: 10px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.character-card:hover {
+    border-color: #4169E1;
+    background: #444;
+}
+
+.character-card.selected {
+    border-color: #00ff00;
+    background: #006600;
+}
+
+.pause-menu {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.9);
+    padding: 30px;
+    border-radius: 15px;
+    color: white;
+    text-align: center;
+    z-index: 50;
+}
+
+.menu-button {
+    background: #4169E1;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s ease;
+}
+
+.menu-button:hover {
+    background: #6495ED;
+}
+
+/* Responsive design */
+@media (max-width: 1200px) {
+    #gameCanvas {
+        width: 100vw;
+        height: calc(100vw * 9 / 16);
+        max-height: 100vh;
+    }
+}
+
+@media (max-width: 768px) {
+    .health-bar {
+        width: 150px;
+        height: 15px;
+    }
+    
+    .player-name {
+        font-size: 12px;
+    }
+    
+    #controls {
+        font-size: 10px;
+    }
+}
